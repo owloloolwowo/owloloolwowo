@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html>
+ 
 <head>
-  <title>Tech Background Website</title>
+  <meta charset="utf-8">
+  <title>Hello...</title>
+ 
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      background-color: #FFD131;
     }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+ 
+    div {
+      background-color: #ffe99b;
       padding: 20px;
-    }
-
-    h1 {
+      font-family: sans-serif;
+      font-weight: bold;
       text-align: center;
+      max-width: 500px;
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-top: 30px;
     }
-
+ 
     p {
-      text-align: justify;
-      margin-bottom: 20px;
+      font-size: 3em;
+      margin: 20px;
+    }
+ 
+    button {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
+      border: 4px solid #000;
+    }
+ 
+    button:hover {
+      background-color: #9FFFE3;
+    }
+ 
+    button:active {
+      background-color: #000;
+      color: #FFF;
     }
   </style>
 </head>
+ 
 <body>
-  <div class="container">
-    <h1>Welcome to Tech Background Website</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum scelerisque mauris, at consectetur neque fringilla vitae. Vestibulum vitae dui non felis venenatis blandit sed et mi. Ut sagittis tincidunt magna. Donec egestas neque a nunc scelerisque, et dignissim neque venenatis. Curabitur a lectus augue. Integer volutpat nisl non ex scelerisque ullamcorper. Sed efficitur sollicitudin tortor, at posuere nunc. Sed sed malesuada leo. Sed a dui sit amet nunc egestas faucibus. Sed tincidunt felis nunc, at pellentesque arcu placerat in. Quisque viverra eleifend sem, non vestibulum ex rutrum sed. Sed iaculis mi ac lectus eleifend, at ullamcorper mauris dictum.
-    </p>
-    <p>
-      Nullam sed iaculis nunc, vitae eleifend purus. Sed elementum scelerisque eros et volutpat. Nunc feugiat neque nec pharetra maximus. Sed tincidunt mi vel lobortis vestibulum. Curabitur dapibus tellus non scelerisque fermentum. In efficitur facilisis leo, vitae fermentum quam tincidunt sit amet. Aliquam erat volutpat. Aliquam dignissim neque et massa laoreet rhoncus. Sed a nisl sem. Donec accumsan lacus eget purus dignissim, eu gravida ligula vestibulum.
-    </p>
+  <div>
+    <p>?</p>
+    <button>click me</button>
   </div>
-</body>
+ 
+  <script>
+    // accessing the elements from our page
+    var buttonElement = document.querySelector("button");
+    var textElement = document.querySelector("p");
+ 
+    // listening to a click event on the button
+    buttonElement.addEventListener("click", changeText, false);
+ 
+    // what gets called when the button is clicked
+    function changeText(e) {
+      textElement.innerText = "hello, world!";
+    }
+  </script>
 </html>
