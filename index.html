@@ -3,7 +3,7 @@
  
 <head>
   <meta charset="utf-8">
-  <title>Hello...</title>
+  <title>RumbleBee4.0</title>
  
   <style>
     body {
@@ -50,6 +50,12 @@
     <p>?</p>
     <button>click me</button>
   </div>
+ <main>
+    <h2>Interactive Content</h2>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="showMessage()">Submit</button>
+    <p id="message"></p>
+  </main>
  
   <script>
     // accessing the elements from our page
@@ -64,4 +70,14 @@
       textElement.innerText = "Hello, Hivertowners!";
     }
   </script>
+  <script>
+     function showMessage() {
+       var input = document.getElementById('textInput').value;
+       if (input === 'look hard') {
+         document.getElementById('message').textContent = 'Congratulations! You found the hidden message.';
+       } else {
+         document.getElementById('message').textContent = 'Try again. Look harder!';
+       }
+     }
+   </script>
 </html>
